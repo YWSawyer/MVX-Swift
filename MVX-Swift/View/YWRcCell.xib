@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="191" id="KGk-i7-Jjw" customClass="YWRcCell" customModule="MVX_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="190.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xVg-O5-OvH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="190.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDJ-L7-zWU">
+                                <rect key="frame" x="141.5" y="0.0" width="37" height="63.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQQ-s5-m2g">
+                                <rect key="frame" x="114" y="63.5" width="92" height="63.5"/>
+                                <state key="normal" title="查看他人信息"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLH-fg-7YW">
+                                <rect key="frame" x="114" y="127" width="92" height="63.5"/>
+                                <state key="normal" title="查看个人信息"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xVg-O5-OvH" secondAttribute="bottom" id="EPx-Ji-2Wg"/>
+                    <constraint firstItem="xVg-O5-OvH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aCg-WN-zYt"/>
+                    <constraint firstItem="xVg-O5-OvH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="q2H-Mv-Cii"/>
+                    <constraint firstAttribute="trailing" secondItem="xVg-O5-OvH" secondAttribute="trailing" id="yIh-Ij-Umr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnOne" destination="YQQ-s5-m2g" id="5aE-3M-RCm"/>
+                <outlet property="btnTwo" destination="FLH-fg-7YW" id="Bw4-Jr-3Qt"/>
+                <outlet property="nameLbl" destination="NDJ-L7-zWU" id="JfD-04-J00"/>
+            </connections>
+            <point key="canvasLocation" x="-102" y="-90"/>
+        </tableViewCell>
+    </objects>
+</document>

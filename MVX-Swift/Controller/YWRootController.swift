@@ -8,7 +8,9 @@
 
 import UIKit
 
-class YWRootController: UIViewController {
+class YWRootController: UITableViewController {
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,16 @@ class YWRootController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - UITableViewDelegate
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
 
     /*
     // MARK: - Navigation

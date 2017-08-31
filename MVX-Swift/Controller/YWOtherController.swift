@@ -1,22 +1,24 @@
 //
-//  OtherController.swift
+//  YWOtherController.swift
 //  MVX-Swift
 //
-//  Created by dahuoshi on 30/08/2017.
+//  Created by dahuoshi on 31/08/2017.
 //  Copyright © 2017 dahuoshi. All rights reserved.
 //
 
 import UIKit
 
-class OtherController: UIViewController {
+class YWOtherController: UIViewController {
 
-    @IBOutlet weak var infoBackView: UIView!
+    @IBOutlet weak var userBackView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        var infoView: YWInfoView = Bundle.main.loadNibNamed("YWInfoView", owner: <#T##Any?#>, options: <#T##[AnyHashable : Any]?#>)
-        
+        let userView: YWInfoView? = Bundle.main.loadNibNamed("YWInfoView", owner: nil, options: nil)?.last as? YWInfoView
+        userView!.frame = userBackView.bounds
+        userBackView.addSubview(userView!)
+        userBackView.backgroundColor = UIColor.lightGray
     }
 
     override func didReceiveMemoryWarning() {
