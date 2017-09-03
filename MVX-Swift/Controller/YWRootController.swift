@@ -15,7 +15,7 @@ class YWRootController: UITableViewController {
         let names = ["MVC","MVP","MVVM"]
         let btn1Titles = ["查看他人信息","查看个人信息","查看个人信息"]
         let btn2Titles = ["查看个人信息","",""]
-        for index in 0..<4 {
+        for index in 0..<3 {
             let model = YWRcModel()
             model.name = names[index]
             model.btn1 = btn1Titles[index]
@@ -28,6 +28,7 @@ class YWRootController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.tableView.tableFooterView = UIView()
     }
    
     
@@ -55,15 +56,26 @@ class YWRootController: UITableViewController {
         var cell: YWRcCell? = tableView.dequeueReusableCell(withIdentifier: cellIndentifier) as? YWRcCell
         if cell == nil {
             cell = Bundle.main.loadNibNamed("YWRcCell", owner: nil, options: nil)?.last as? YWRcCell
+            cell?.selectionStyle = .none
         }
         cell?.nameLbl.text = model.name
         cell?.btnOne.setTitle(model.btn1, for: .normal)
-        if indexPath.row == 2 {
+        switch indexPath.row {
+        case 0:
             cell?.btnTwo.setTitle(model.btn2, for: .normal)
+            cell?.backgroundColor = UIColor.lightGray
+        case 1:
+            cell?.btnTwo.isHidden = true
+            cell?.backgroundColor = UIColor.orange
+        case 2:
+            cell?.btnTwo.isHidden = true
+            cell?.backgroundColor = UIColor.yellow
+        default:
+            break
         }
         return cell!
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
     }

@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="15" y="108"/>
         </scene>
-        <!--Table View Controller-->
+        <!--MVX-->
         <scene sceneID="bkk-eQ-6lV">
             <objects>
-                <tableViewController id="F7p-LZ-it8" sceneMemberID="viewController">
+                <tableViewController title="MVX" id="F7p-LZ-it8" customClass="YWRootController" customModule="MVX_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vev-sK-WSW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
