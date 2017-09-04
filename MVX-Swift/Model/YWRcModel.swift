@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YWRcModel: NSObject {
+class YWRcModel: YWBasicModel {
     
     var name: String!
     var btn1: String!

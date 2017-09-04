@@ -30,10 +30,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQQ-s5-m2g">
                                 <rect key="frame" x="114" y="63.5" width="92" height="63.5"/>
                                 <state key="normal" title="查看他人信息"/>
+                                <connections>
+                                    <action selector="btn1Action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="asM-Yz-xep"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLH-fg-7YW">
                                 <rect key="frame" x="114" y="127" width="92" height="63.5"/>
                                 <state key="normal" title="查看个人信息"/>
+                                <connections>
+                                    <action selector="btn2Action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4jo-Wb-b3d"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>

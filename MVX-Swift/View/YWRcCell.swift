@@ -9,15 +9,17 @@
 import UIKit
 
 @objc protocol CellDelegate: NSObjectProtocol {
-  @objc func didSelectButtonIn(tableView: UITableView, cellName: String, btnIndex: NSInteger)
+   func didSelectButtonIn(tableView: UITableView, cellName: String, btnIndex: NSInteger)
 }
 
-class YWRcCell: UITableViewCell {
+class YWRcCell: YWBasicCell {
 
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var btnOne: UIButton!
     @IBOutlet weak var btnTwo: UIButton!
-    var delegate: CellDelegate?
+    
+    weak var delegate: CellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,12 +32,17 @@ class YWRcCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
-    func btn1Action() {
+    @IBAction func btn1Action(_ sender: UIButton) {
         if delegate?.responds(to: #selector(delegate?.didSelectButtonIn(tableView:cellName:btnIndex:))) != nil {
-            print("")
+            delegate!.didSelectButtonIn(tableView: tabview, cellName: nameLbl.text!, btnIndex: 1)
         }
     }
-  
+    
+    
+    @IBAction func btn2Action(_ sender: UIButton) {
+        if delegate?.responds(to: #selector(delegate?.didSelectButtonIn(tableView:cellName:btnIndex:))) != nil {
+            delegate?.didSelectButtonIn(tableView: tabview, cellName: nameLbl.text!, btnIndex: 2)
+        }
+    }
     
 }

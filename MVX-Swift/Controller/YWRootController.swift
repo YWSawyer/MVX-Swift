@@ -8,8 +8,8 @@
 
 import UIKit
 
-class YWRootController: UITableViewController {
-    
+class YWRootController: UITableViewController,CellDelegate {
+   
     lazy var datas: [YWRcModel] = {() -> [YWRcModel] in
         var array: [YWRcModel] = [YWRcModel]()
         let names = ["MVC","MVP","MVVM"]
@@ -55,7 +55,8 @@ class YWRootController: UITableViewController {
         let model = datas[indexPath.row]
         var cell: YWRcCell? = tableView.dequeueReusableCell(withIdentifier: cellIndentifier) as? YWRcCell
         if cell == nil {
-            cell = Bundle.main.loadNibNamed("YWRcCell", owner: nil, options: nil)?.last as? YWRcCell
+            cell = YWRcCell.loadNibCellFor(tabView: tableView, nibName: "YWRcCell") as? YWRcCell
+            cell?.delegate = self
             cell?.selectionStyle = .none
         }
         cell?.nameLbl.text = model.name
@@ -78,6 +79,27 @@ class YWRootController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
+    }
+    
+    //MARK: -YWRcCellDelegate
+
+    func didSelectButtonIn(tableView: UITableView, cellName: String, btnIndex: NSInteger) {
+        print("name:\(cellName) index:\(btnIndex)")
+        pushDestinationController(cellName: cellName, index: btnIndex)
+    }
+    
+    
+    func pushDestinationController(cellName: String, index: NSInteger){
+        switch cellName {
+        case "MVC":
+            if index == 1 {
+                self.performSegue(withIdentifier: "mvcOtherIdentifier", sender: nil)
+            }else{
+                self.performSegue(withIdentifier: "mvcSelfIdentifier", sender: nil)
+            }
+        default:
+            print("sdg")
+        }
     }
     /*
     // MARK: - Navigation

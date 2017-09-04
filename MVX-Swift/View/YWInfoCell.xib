@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="166" id="KGk-i7-Jjw" customClass="YWInfoCell" customModule="MVX_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="166"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="165.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlogTitle0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-df-b6V">
+                        <rect key="frame" x="10" y="72" width="78" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="摘要：blogSummery0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNW-LO-fFq">
+                        <rect key="frame" x="133" y="75.5" width="132" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-OG-aow">
+                        <rect key="frame" x="442" y="68" width="44" height="30"/>
+                        <state key="normal" title="分享 8"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apJ-4a-uN0">
+                        <rect key="frame" x="370" y="68" width="36" height="30"/>
+                        <state key="normal" title="赞 10">
+                            <color key="titleColor" red="1" green="0.31051264690000002" blue="0.24034557810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="yQi-OG-aow" secondAttribute="trailing" constant="10" id="Jpp-KT-NVa"/>
+                    <constraint firstItem="yQi-OG-aow" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JwC-fl-zpb"/>
+                    <constraint firstItem="MDs-df-b6V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MJB-qy-049"/>
+                    <constraint firstItem="apJ-4a-uN0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NQO-YU-HkL"/>
+                    <constraint firstItem="MDs-df-b6V" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wbj-81-dxK"/>
+                    <constraint firstItem="yQi-OG-aow" firstAttribute="leading" secondItem="apJ-4a-uN0" secondAttribute="trailing" constant="36" id="fTI-Rv-auS"/>
+                    <constraint firstItem="BNW-LO-fFq" firstAttribute="leading" secondItem="MDs-df-b6V" secondAttribute="trailing" constant="45" id="rcS-Kg-HRC"/>
+                    <constraint firstItem="BNW-LO-fFq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="w6K-Ax-zaY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="infoLbl" destination="BNW-LO-fFq" id="TWg-Ve-3tE"/>
+                <outlet property="praiseBtn" destination="apJ-4a-uN0" id="n7S-r8-Wh1"/>
+                <outlet property="shareBtn" destination="yQi-OG-aow" id="efF-tW-6DS"/>
+                <outlet property="titleLbl" destination="MDs-df-b6V" id="pXt-Pu-iMd"/>
+            </connections>
+            <point key="canvasLocation" x="22" y="-28"/>
+        </tableViewCell>
+    </objects>
+</document>

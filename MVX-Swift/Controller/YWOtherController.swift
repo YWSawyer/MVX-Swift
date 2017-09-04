@@ -8,17 +8,16 @@
 
 import UIKit
 
-class YWOtherController: UIViewController {
+class YWOtherController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var userBackView: UIView!
-    
+    @IBOutlet weak var tabView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let userView: YWInfoView? = Bundle.main.loadNibNamed("YWInfoView", owner: nil, options: nil)?.last as? YWInfoView
         userView!.frame = userBackView.bounds
         userBackView.addSubview(userView!)
-        userBackView.backgroundColor = UIColor.lightGray
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +25,25 @@ class YWOtherController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - TableViewDelegate
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    // MARK: - TableViewDatasource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
     /*
     // MARK: - Navigation
 
