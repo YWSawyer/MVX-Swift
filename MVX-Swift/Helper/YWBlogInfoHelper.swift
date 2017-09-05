@@ -16,13 +16,14 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
         return manager
     }()
     
-    var datas: [YWBlogInfoModel]!
+    var datas: [YWBlogInfoModel]?
     
     convenience init(tableView: UITableView) {
         self.init()
         self.tabview = tableView
         self.tabview.delegate = self
         self.tabview.dataSource = self
+        self.tabview.tableFooterView = UIView()
         
     }
     
@@ -44,7 +45,7 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
             cell = YWInfoCell.loadNibCellFor(tabView: tableView, nibName: "YWInfoCell") as? YWInfoCell
             cell?.selectionStyle = .none
         }
-        let model = self.datas[indexPath.row]
+        let model = self.datas![indexPath.row]
         cell?.titleLbl.text = model.blogTitle
         cell?.infoLbl.text  = model.blogDigest
         cell?.praiseBtn.setTitle("赞\(String(model.praiseCount))", for: .normal)
@@ -53,14 +54,17 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.datas.count
+        return self.datas?.count ?? 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
     }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80
+//    }
 }

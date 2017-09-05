@@ -541,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5PY75XDDR;
 				INFOPLIST_FILE = "MVX-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yw.MVX-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,6 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5PY75XDDR;
 				INFOPLIST_FILE = "MVX-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yw.MVX-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
