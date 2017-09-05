@@ -8,42 +8,46 @@
 
 import UIKit
 
-class YWOtherController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class YWOtherController: UIViewController {
 
     @IBOutlet weak var userBackView: UIView!
     @IBOutlet weak var tabView: UITableView!
+    
+    var infoHelper: YWUserInfoHelper!
+    var blogHelper: YWBlogInfoHelper!
+    var infoView: YWInfoView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let userView: YWInfoView? = Bundle.main.loadNibNamed("YWInfoView", owner: nil, options: nil)?.last as? YWInfoView
-        userView!.frame = userBackView.bounds
-        userBackView.addSubview(userView!)
+        setupUI()
+        configInfoView()
+        configBlogView()
+    }
+    
+    func setupUI() {
+        
+        infoView = Bundle.main.loadNibNamed("YWInfoView", owner: nil, options: nil)?.last as? YWInfoView
+        infoView.frame = userBackView.bounds
+        userBackView.addSubview(infoView)
     }
 
+    func configInfoView() {
+        infoHelper = YWUserInfoHelper(infoView: infoView)
+        infoHelper.loadData()
+    }
+    
+    func configBlogView() {
+        blogHelper = YWBlogInfoHelper(tableView: self.tabView)
+        blogHelper.loadBlogData()
+    
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - TableViewDelegate
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
-    // MARK: - TableViewDatasource
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
     /*
     // MARK: - Navigation
 

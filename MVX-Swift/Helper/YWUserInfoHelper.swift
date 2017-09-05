@@ -22,6 +22,13 @@ class YWUserInfoHelper: NSObject {
     }
 
     func loadData() {
-        //
+        apiManager.getInfoData { (model: YWHeadInfoModel) in
+            headView.headImage.image = UIImage(named: model.headImage!)
+            headView.nameLbl.text    = model.userName
+            headView.productCountLbl.text = "作品：\(model.productsCount!)"
+            headView.friendCountLbl.text  = "好友：\(model.friendCount!)"
+            headView.personalInfoLbl.text = "个人简介：\(model.personalInfo!)"
+            
+        }
     }
 }

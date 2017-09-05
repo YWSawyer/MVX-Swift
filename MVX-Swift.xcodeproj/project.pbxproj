@@ -14,6 +14,8 @@
 		188618251F5D3BEB0040C979 /* YWRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188618241F5D3BEB0040C979 /* YWRequestManager.swift */; };
 		188618271F5D59440040C979 /* YWBasicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188618261F5D59440040C979 /* YWBasicModel.swift */; };
 		188618291F5D59AC0040C979 /* YWHeadInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188618281F5D59AC0040C979 /* YWHeadInfoModel.swift */; };
+		1886182B1F5E4E780040C979 /* YWBlogInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886182A1F5E4E780040C979 /* YWBlogInfoHelper.swift */; };
+		1886182D1F5E52C80040C979 /* YWBlogInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886182C1F5E52C80040C979 /* YWBlogInfoModel.swift */; };
 		18A6703F1F56BDCC004EC7DC /* YWInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6703E1F56BDCC004EC7DC /* YWInfoView.swift */; };
 		18A670411F56BF26004EC7DC /* YWInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A670401F56BF26004EC7DC /* YWInfoView.xib */; };
 		18A670461F5796AC004EC7DC /* YWOtherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A670451F5796AC004EC7DC /* YWOtherController.swift */; };
@@ -54,6 +56,8 @@
 		188618241F5D3BEB0040C979 /* YWRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWRequestManager.swift; sourceTree = "<group>"; };
 		188618261F5D59440040C979 /* YWBasicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWBasicModel.swift; sourceTree = "<group>"; };
 		188618281F5D59AC0040C979 /* YWHeadInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWHeadInfoModel.swift; sourceTree = "<group>"; };
+		1886182A1F5E4E780040C979 /* YWBlogInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWBlogInfoHelper.swift; sourceTree = "<group>"; };
+		1886182C1F5E52C80040C979 /* YWBlogInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWBlogInfoModel.swift; sourceTree = "<group>"; };
 		18A6703E1F56BDCC004EC7DC /* YWInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWInfoView.swift; sourceTree = "<group>"; };
 		18A670401F56BF26004EC7DC /* YWInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YWInfoView.xib; sourceTree = "<group>"; };
 		18A670451F5796AC004EC7DC /* YWOtherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWOtherController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				188618211F5D31890040C979 /* YWUserInfoHelper.swift */,
+				1886182A1F5E4E780040C979 /* YWBlogInfoHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			children = (
 				18BF8BAF1F58109100F86967 /* YWRcModel.swift */,
 				188618281F5D59AC0040C979 /* YWHeadInfoModel.swift */,
+				1886182C1F5E52C80040C979 /* YWBlogInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,10 +359,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1886182B1F5E4E780040C979 /* YWBlogInfoHelper.swift in Sources */,
 				18A670461F5796AC004EC7DC /* YWOtherController.swift in Sources */,
 				1886181B1F5D230B0040C979 /* YWInfoCell.swift in Sources */,
 				18A7D96F1F554EA300225CD8 /* AppDelegate.swift in Sources */,
 				188618251F5D3BEB0040C979 /* YWRequestManager.swift in Sources */,
+				1886182D1F5E52C80040C979 /* YWBlogInfoModel.swift in Sources */,
 				18A6703F1F56BDCC004EC7DC /* YWInfoView.swift in Sources */,
 				188618271F5D59440040C979 /* YWBasicModel.swift in Sources */,
 				18A7D99F1F55591800225CD8 /* YWRootController.swift in Sources */,
