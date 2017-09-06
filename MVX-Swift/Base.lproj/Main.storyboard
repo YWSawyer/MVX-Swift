@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,16 +49,71 @@
             </objects>
             <point key="canvasLocation" x="859" y="107"/>
         </scene>
-        <!--View Controller-->
+        <!--Self Controller-->
         <scene sceneID="F8K-SB-VD9">
             <objects>
-                <viewController id="Bcp-5m-gb2" sceneMemberID="viewController">
+                <viewController id="Bcp-5m-gb2" customClass="YWSelfController" customModule="MVX_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VoS-P0-V3s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50F-hr-31R">
+                                <rect key="frame" x="0.0" y="64" width="414" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="uNW-hB-Asb"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fqX-dm-EdQ">
+                                <rect key="frame" x="0.0" y="234" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UO-5A-Rtk">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                        <state key="normal" title="博客">
+                                            <color key="titleColor" red="1" green="0.31051264690000002" blue="0.24034557810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blogBtnAction:" destination="Bcp-5m-gb2" eventType="touchUpInside" id="wYq-ue-YfP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpc-u8-aDB">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                                        <state key="normal" title="草稿"/>
+                                        <connections>
+                                            <action selector="draftBtnAction:" destination="Bcp-5m-gb2" eventType="touchUpInside" id="k2G-9I-rip"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nzV-Io-bK0"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tY0-8v-Lk5">
+                                <rect key="frame" x="0.0" y="274" width="414" height="462"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="cvh-si-176"/>
+                        <constraints>
+                            <constraint firstItem="Cwk-OX-aQY" firstAttribute="bottom" secondItem="tY0-8v-Lk5" secondAttribute="bottom" id="4o4-8p-she"/>
+                            <constraint firstItem="tY0-8v-Lk5" firstAttribute="leading" secondItem="Cwk-OX-aQY" secondAttribute="leading" id="9ja-vq-KQN"/>
+                            <constraint firstItem="Cwk-OX-aQY" firstAttribute="trailing" secondItem="tY0-8v-Lk5" secondAttribute="trailing" id="AZk-Hp-Nhd"/>
+                            <constraint firstItem="fqX-dm-EdQ" firstAttribute="leading" secondItem="Cwk-OX-aQY" secondAttribute="leading" id="KFL-HJ-5J4"/>
+                            <constraint firstItem="Cwk-OX-aQY" firstAttribute="trailing" secondItem="fqX-dm-EdQ" secondAttribute="trailing" id="RYT-eZ-bPd"/>
+                            <constraint firstItem="fqX-dm-EdQ" firstAttribute="top" secondItem="50F-hr-31R" secondAttribute="bottom" id="dpc-hP-s3c"/>
+                            <constraint firstItem="50F-hr-31R" firstAttribute="top" secondItem="VoS-P0-V3s" secondAttribute="top" constant="64" id="gqc-7O-ww2"/>
+                            <constraint firstItem="tY0-8v-Lk5" firstAttribute="top" secondItem="fqX-dm-EdQ" secondAttribute="bottom" id="iIp-Bh-z9n"/>
+                            <constraint firstItem="50F-hr-31R" firstAttribute="leading" secondItem="VoS-P0-V3s" secondAttribute="leading" id="icL-b7-VAy"/>
+                            <constraint firstItem="50F-hr-31R" firstAttribute="trailing" secondItem="VoS-P0-V3s" secondAttribute="trailing" id="nXl-8u-sdi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cwk-OX-aQY"/>
                     </view>
+                    <connections>
+                        <outlet property="blogBtn" destination="2UO-5A-Rtk" id="EO3-gM-0t7"/>
+                        <outlet property="blogTabView" destination="tY0-8v-Lk5" id="V6O-fU-kdL"/>
+                        <outlet property="draftBtn" destination="Tpc-u8-aDB" id="EJk-J6-sXD"/>
+                        <outlet property="userBackView" destination="50F-hr-31R" id="Go0-wN-A7S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1c-f6-1hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

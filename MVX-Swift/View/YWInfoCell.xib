@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,8 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="510" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="摘要：blogSummery0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNW-LO-fFq">
-                        <rect key="frame" x="118" y="57" width="132" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="摘要：blogSummery0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNW-LO-fFq">
+                        <rect key="frame" x="98" y="10" width="150" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="Wgg-YO-ctA"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -40,8 +44,11 @@
                             <color key="titleColor" red="1" green="0.31051264690000002" blue="0.24034557810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlogTitle0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-df-b6V">
-                        <rect key="frame" x="10" y="20" width="78" height="89.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlogTitle0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-df-b6V">
+                        <rect key="frame" x="10" y="10" width="78" height="109.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="PfG-uu-LuR"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -51,15 +58,17 @@
                     <constraint firstAttribute="trailing" secondItem="yQi-OG-aow" secondAttribute="trailing" constant="10" id="3oN-lF-mi8"/>
                     <constraint firstItem="yQi-OG-aow" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5Mm-bf-MNK"/>
                     <constraint firstItem="MDs-df-b6V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="E6e-ig-cXU"/>
-                    <constraint firstItem="BNW-LO-fFq" firstAttribute="leading" secondItem="MDs-df-b6V" secondAttribute="trailing" constant="30" id="F1x-7N-i90"/>
+                    <constraint firstItem="BNW-LO-fFq" firstAttribute="leading" secondItem="MDs-df-b6V" secondAttribute="trailing" constant="10" id="F1x-7N-i90"/>
                     <constraint firstItem="apJ-4a-uN0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FMg-uh-OBn"/>
                     <constraint firstItem="MDs-df-b6V" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Nss-8G-syU"/>
                     <constraint firstItem="BNW-LO-fFq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rqe-JC-raD"/>
-                    <constraint firstItem="MDs-df-b6V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="eLN-I6-Vah"/>
+                    <constraint firstItem="MDs-df-b6V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eLN-I6-Vah"/>
+                    <constraint firstItem="BNW-LO-fFq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="hgx-Yg-7Vo"/>
                     <constraint firstItem="yQi-OG-aow" firstAttribute="leading" secondItem="apJ-4a-uN0" secondAttribute="trailing" constant="20" id="nUX-bk-ELL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="CJe-V0-6AS"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="infoLbl" destination="BNW-LO-fFq" id="TWg-Ve-3tE"/>
                 <outlet property="praiseBtn" destination="apJ-4a-uN0" id="n7S-r8-Wh1"/>
