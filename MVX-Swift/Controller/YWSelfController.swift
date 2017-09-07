@@ -16,8 +16,13 @@ class YWSelfController: UIViewController {
     @IBOutlet weak var draftBtn: UIButton!
     @IBOutlet weak var blogTabView: UITableView!
     
+    var draftTabView: UITableView!
+    
+    
     var infoHelper: YWUserInfoHelper!
     var blogHelper: YWBlogInfoHelper!
+    var draftHelper: YWDraftInfoHelper!
+    
     var infoView: YWInfoView!
     
     override func viewDidLoad() {
@@ -26,6 +31,7 @@ class YWSelfController: UIViewController {
         setupUI()
         configInfoView()
         configBlogView()
+        configDraftView()
     }
     
     func setupUI() {
@@ -33,6 +39,17 @@ class YWSelfController: UIViewController {
         infoView = Bundle.main.loadNibNamed("YWInfoView", owner: nil, options: nil)?.last as? YWInfoView
         infoView.frame = userBackView.bounds
         userBackView.addSubview(infoView)
+        draftTabView = UITableView(frame: CGRect.zero, style: .plain)
+        self.view.addSubview(draftTabView)
+        
+        draftTabView.snp.makeConstraints { make in
+            make.size.equalTo(self.blogTabView.snp.size)
+            make.left.equalTo(self.blogTabView.snp.right)
+            make.top.equalTo(self.blogTabView.snp.top)
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.screenOrientationAction), name: .UIDeviceOrientationDidChange, object: nil)
+        
     }
     
     func configInfoView() {
@@ -46,6 +63,12 @@ class YWSelfController: UIViewController {
         
     }
 
+    func configDraftView() {
+        draftHelper = YWDraftInfoHelper(tableView: self.draftTabView)
+        draftHelper.loadBlogData()
+        
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,21 +77,61 @@ class YWSelfController: UIViewController {
     @IBAction func blogBtnAction(_ sender: Any) {
         self.blogBtn.setTitleColor(UIColor.red, for: .normal)
         self.draftBtn.setTitleColor(UIColor.black, for: .normal)
+        self.blogTabView.snp.updateConstraints { make in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+        }
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
         
     }
     
     @IBAction func draftBtnAction(_ sender: Any) {
         self.blogBtn.setTitleColor(UIColor.black, for: .normal)
         self.draftBtn.setTitleColor(UIColor.red, for: .normal)
+        self.blogTabView.snp.updateConstraints { make in
+            make.leading.equalToSuperview().offset(-self.view.frame.size.width)
+            make.trailing.equalToSuperview().offset(-self.view.frame.size.width)
+        }
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
         
     }
     
     override func updateViewConstraints() {
-        self.blogTabView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(-300)
-            make.trailing.equalToSuperview().offset(300)
-        }
+        
         super.updateViewConstraints()
+    }
+    
+    @objc func screenOrientationAction() {
+        let orientation = UIDevice.current.orientation
+        if (self.blogTabView.frame.origin.x<0) && (orientation == .landscapeLeft || orientation == .landscapeRight) {
+            self.blogTabView.snp.updateConstraints { make in
+                make.leading.equalToSuperview().offset(-self.view.frame.size.width)
+                make.trailing.equalToSuperview().offset(-self.view.frame.size.width)
+            }
+            UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+            }
+        }else if (orientation == .portrait) {
+            if (self.blogTabView.frame.origin.x>=0) {
+                self.blogTabView.snp.updateConstraints { make in
+                    make.leading.equalToSuperview()
+                    make.trailing.equalToSuperview()
+                }
+            }else {
+                self.blogTabView.snp.updateConstraints { make in
+                    make.leading.equalToSuperview().offset(-self.view.frame.size.width)
+                    make.trailing.equalToSuperview().offset(-self.view.frame.size.width)
+                }
+            }
+            
+            UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     /*
     // MARK: - Navigation

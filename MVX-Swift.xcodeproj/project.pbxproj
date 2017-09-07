@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18341FB41F5FA0890029441E /* YWSelfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18341FB31F5FA0890029441E /* YWSelfController.swift */; };
+		1853111C1F60E8A400252B29 /* YWDraftInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853111B1F60E8A400252B29 /* YWDraftInfoHelper.swift */; };
 		1886181B1F5D230B0040C979 /* YWInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188618191F5D230B0040C979 /* YWInfoCell.swift */; };
 		1886181C1F5D230B0040C979 /* YWInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1886181A1F5D230B0040C979 /* YWInfoCell.xib */; };
 		1886181F1F5D2A950040C979 /* YWBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886181E1F5D2A950040C979 /* YWBasicCell.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		050C6CFEF8C6F53F323AB4A3 /* Pods-MVX-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVX-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVX-Swift/Pods-MVX-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		18341FB31F5FA0890029441E /* YWSelfController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWSelfController.swift; sourceTree = "<group>"; };
+		1853111B1F60E8A400252B29 /* YWDraftInfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWDraftInfoHelper.swift; sourceTree = "<group>"; };
 		188618191F5D230B0040C979 /* YWInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWInfoCell.swift; sourceTree = "<group>"; };
 		1886181A1F5D230B0040C979 /* YWInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YWInfoCell.xib; sourceTree = "<group>"; };
 		1886181E1F5D2A950040C979 /* YWBasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWBasicCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				188618211F5D31890040C979 /* YWUserInfoHelper.swift */,
 				1886182A1F5E4E780040C979 /* YWBlogInfoHelper.swift */,
+				1853111B1F60E8A400252B29 /* YWDraftInfoHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				1886181F1F5D2A950040C979 /* YWBasicCell.swift in Sources */,
 				188618221F5D31890040C979 /* YWUserInfoHelper.swift in Sources */,
 				18BF8BAC1F580B2D00F86967 /* YWRcCell.swift in Sources */,
+				1853111C1F60E8A400252B29 /* YWDraftInfoHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

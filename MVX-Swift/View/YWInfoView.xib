@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,32 +17,32 @@
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon0" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-fr-U1f">
-                    <rect key="frame" x="179.5" y="16" width="16" height="19"/>
+                    <rect key="frame" x="179.66666666666666" y="16" width="16" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="16" id="KFA-Bj-rvx"/>
                         <constraint firstAttribute="height" constant="19" id="Sk2-4W-pQS"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作品：8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI3-hp-rvQ">
-                    <rect key="frame" x="93.5" y="92" width="62.5" height="20.5"/>
+                    <rect key="frame" x="93.666666666666686" y="92" width="62.333333333333314" height="20.666666666666671"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9N5-8X-zVc">
-                    <rect key="frame" x="165.5" y="57" width="44" height="21"/>
+                    <rect key="frame" x="165.66666666666666" y="57" width="44" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好友：10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osJ-1v-phC">
-                    <rect key="frame" x="219.5" y="92" width="70" height="21"/>
+                    <rect key="frame" x="219.66666666666669" y="92" width="70.000000000000057" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人简介：userSummery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geu-IB-1f8">
-                    <rect key="frame" x="20" y="135" width="194" height="21"/>
+                    <rect key="frame" x="20" y="137" width="194" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -52,17 +52,48 @@
             <constraints>
                 <constraint firstItem="osJ-1v-phC" firstAttribute="leading" secondItem="9N5-8X-zVc" secondAttribute="trailing" constant="10" id="2lE-1z-wQL"/>
                 <constraint firstItem="9N5-8X-zVc" firstAttribute="leading" secondItem="mI3-hp-rvQ" secondAttribute="trailing" constant="10" id="729-sS-8Dl"/>
+                <constraint firstItem="06E-0d-oaZ" firstAttribute="bottom" secondItem="geu-IB-1f8" secondAttribute="bottom" constant="28" id="A4x-Yv-TaI">
+                    <variation key="widthClass=regular" constant="20"/>
+                </constraint>
                 <constraint firstItem="AJD-fr-U1f" firstAttribute="centerX" secondItem="06E-0d-oaZ" secondAttribute="centerX" id="C5P-8y-bn9"/>
-                <constraint firstItem="AJD-fr-U1f" firstAttribute="top" secondItem="06E-0d-oaZ" secondAttribute="top" constant="16" id="C6S-Ob-EK3"/>
+                <constraint firstItem="AJD-fr-U1f" firstAttribute="top" secondItem="06E-0d-oaZ" secondAttribute="top" constant="16" id="C6S-Ob-EK3">
+                    <variation key="widthClass=regular" constant="10"/>
+                </constraint>
                 <constraint firstItem="geu-IB-1f8" firstAttribute="leading" secondItem="06E-0d-oaZ" secondAttribute="leading" constant="20" id="GsK-NB-nY6"/>
+                <constraint firstItem="geu-IB-1f8" firstAttribute="top" secondItem="mI3-hp-rvQ" secondAttribute="bottom" constant="30.333333333333329" id="Kac-MO-0dW">
+                    <variation key="widthClass=regular" constant="10"/>
+                </constraint>
+                <constraint firstItem="geu-IB-1f8" firstAttribute="top" secondItem="mI3-hp-rvQ" secondAttribute="bottom" constant="24.333333333333329" id="cXO-Z0-TId"/>
                 <constraint firstItem="osJ-1v-phC" firstAttribute="top" secondItem="9N5-8X-zVc" secondAttribute="bottom" constant="14" id="ena-uF-ZKG"/>
-                <constraint firstItem="geu-IB-1f8" firstAttribute="top" secondItem="mI3-hp-rvQ" secondAttribute="bottom" constant="22.666666666666657" id="lp5-yO-MYV"/>
+                <constraint firstItem="geu-IB-1f8" firstAttribute="top" relation="lessThanOrEqual" secondItem="mI3-hp-rvQ" secondAttribute="bottom" constant="22.666666666666657" id="lp5-yO-MYV">
+                    <variation key="widthClass=regular" constant="22.670000000000002"/>
+                </constraint>
                 <constraint firstItem="9N5-8X-zVc" firstAttribute="top" secondItem="AJD-fr-U1f" secondAttribute="bottom" constant="22" id="pYO-8C-bsR"/>
                 <constraint firstItem="9N5-8X-zVc" firstAttribute="centerX" secondItem="AJD-fr-U1f" secondAttribute="centerX" id="rJf-QY-KZe"/>
                 <constraint firstItem="mI3-hp-rvQ" firstAttribute="top" secondItem="9N5-8X-zVc" secondAttribute="bottom" constant="14" id="t4K-V8-23x"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="06E-0d-oaZ"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="A4x-Yv-TaI"/>
+                    <exclude reference="Kac-MO-0dW"/>
+                    <exclude reference="cXO-Z0-TId"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="cXO-Z0-TId"/>
+                    <exclude reference="lp5-yO-MYV"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="A4x-Yv-TaI"/>
+                    <include reference="Kac-MO-0dW"/>
+                    <exclude reference="lp5-yO-MYV"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="friendCountLbl" destination="osJ-1v-phC" id="4At-fk-DMj"/>
                 <outlet property="headImage" destination="AJD-fr-U1f" id="YEi-wu-74p"/>
