@@ -24,7 +24,7 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
         self.tabview.delegate = self
         self.tabview.dataSource = self
         self.tabview.tableFooterView = UIView()
-        
+        //扯到蛋了
     }
     
     func loadBlogData() {
