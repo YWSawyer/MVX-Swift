@@ -11,6 +11,7 @@ import UIKit
 class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
 
     var tabview: UITableView!
+    var test: UIButton!
     var apiManager: YWRequestManager = {()->YWRequestManager in
         let manager = YWRequestManager.shareManager
         return manager
