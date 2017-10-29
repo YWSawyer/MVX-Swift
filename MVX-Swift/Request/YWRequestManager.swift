@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//第一个修改
 typealias block = (_ datas: NSData)-> Void
 
 class YWRequestManager: NSObject {
@@ -40,6 +40,7 @@ class YWRequestManager: NSObject {
                 model.blogTitle = "屌丝如何逆袭"
                 model.blogDigest = "讲述女屌丝如果嫁人豪门讲述女屌丝如果嫁人豪门讲述女屌丝如果嫁人豪门讲述女屌丝如果嫁人豪门讲述女屌丝如果嫁人豪门讲述女屌丝如果嫁人豪门讲述女屌丝如果嫁人豪门"
             }
+            //第三个修改
             model.praiseCount = String(arc4random()%20)
             model.shareCount = String(arc4random()%20)
             arr.append(model)
