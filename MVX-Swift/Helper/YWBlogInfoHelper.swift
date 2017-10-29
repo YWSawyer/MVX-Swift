@@ -26,7 +26,7 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
         self.tabview.dataSource = self
         self.tabview.tableFooterView = UIView()
     }
-    
+    //主干这里发生变化
     func loadBlogData() {
         apiManager.getBlogInfo { (datas: [YWBlogInfoModel]) in
             self.datas = datas
