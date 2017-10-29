@@ -15,6 +15,7 @@ class YWDraftInfoHelper: NSObject,UITableViewDataSource,UITableViewDelegate {
     var apiManager: YWRequestManager = {()->YWRequestManager in
         let manager = YWRequestManager.shareManager
         return manager
+        
     }()
     
     var datas: [YWBlogInfoModel]?
