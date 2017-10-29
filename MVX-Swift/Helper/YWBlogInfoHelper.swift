@@ -22,6 +22,7 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
     convenience init(tableView: UITableView) {
         self.init()
         self.tabview = tableView
+        //主分支的改变
         self.tabview.delegate = self
         self.tabview.dataSource = self
         self.tabview.tableFooterView = UIView()
