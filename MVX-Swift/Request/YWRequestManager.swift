@@ -29,7 +29,9 @@ class YWRequestManager: NSObject {
     }
     
     func getBlogInfo(completion: ((_ datas: [YWBlogInfoModel])->Void)) {
-        
+        if let a = 3 {
+            print(@"master test...");
+        }
         var arr = [YWBlogInfoModel]()
         for i in 0...5 {
             let model: YWBlogInfoModel = YWBlogInfoModel()
