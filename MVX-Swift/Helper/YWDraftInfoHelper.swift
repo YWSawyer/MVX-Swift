@@ -19,7 +19,6 @@ class YWDraftInfoHelper: NSObject,UITableViewDataSource,UITableViewDelegate {
     }()
     
     var datas: [YWBlogInfoModel]?
-    //主分支这里修又改了
     convenience init(tableView: UITableView) {
         self.init()
         self.tabview = tableView
