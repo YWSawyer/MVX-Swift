@@ -17,7 +17,7 @@ class YWDraftInfoHelper: NSObject,UITableViewDataSource,UITableViewDelegate {
         return manager
         
     }()
-    
+    //变化2
     var datas: [YWBlogInfoModel]?
     convenience init(tableView: UITableView) {
         self.init()

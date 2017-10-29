@@ -28,6 +28,7 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
     }
     //分支不一样的地方
     //这里也不一样
+    //主干这里发生变化
     func loadBlogData() {
         apiManager.getBlogInfo { (datas: [YWBlogInfoModel]) in
             self.datas = datas
@@ -45,10 +46,7 @@ class YWBlogInfoHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
         if cell == nil {
             cell = YWInfoCell.loadNibCellFor(tabView: tableView, nibName: "YWInfoCell") as? YWInfoCell
             cell?.selectionStyle = .none
-        }else{
-            return nil;
         }
-        
         let model = self.datas![indexPath.row]
         cell?.titleLbl.text = model.blogTitle
         cell?.infoLbl.text  = model.blogDigest
